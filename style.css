@@ -1517,6 +1517,26 @@ ul {
   }
 }
 
+/* Keep focus cards readable on phones and narrow tablets. */
+@media (max-width: 900px) {
+
+  .focus-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .focus-card {
+    min-width: 0;
+  }
+
+  .focus-status {
+    flex-shrink: 0;
+  }
+
+  .focus-topic {
+    overflow-wrap: anywhere;
+  }
+}
+
 
 /* Tablets and mobile landscape */
 
