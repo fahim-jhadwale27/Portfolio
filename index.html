@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohammed Fahim Jhadwale - Computer Science Student at Scaler School of Technology exploring AI/ML, Mathematics, and Quantitative Computing.">
+  <meta name="author" content="Mohammed Fahim Jhadwale">
+  <title>Fahim | Computer Science &amp; AI/ML Student Portfolio</title>
+  <!-- Play CDN is used here only to demonstrate a few utility classes. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Keep Tailwind's reset disabled so it cannot change the existing design. -->
+  <script>
+    tailwind.config = { corePlugins: { preflight: false } };
+  </script>
+  <!-- The page's main design is in style.css. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 1. STICKY NAVIGATION BAR                   -->
+  <!-- Demonstrates: sticky positioning, Flexbox,  -->
+  <!-- z-index, glassmorphism, responsive wrap    -->
+  <!-- ========================================== -->
+  <!-- Tailwind examples: sticky, top-0, and w-full repeat the matching CSS rules. -->
+  <header class="site-header sticky top-0 w-full">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#" class="brand-logo" aria-label="Fahim's Portfolio Home">
+        <span class="logo-sym">&lt;</span>FAHIM<span class="logo-sym">/&gt;</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#focus" class="nav-link">Focus</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-sm btn-primary">Connect</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- 2. HERO SECTION                            -->
+    <!-- Demonstrates: CSS Grid, Flexbox,           -->
+    <!-- Keyframe animation, Transforms, Badges     -->
+    <!-- ========================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left Column: Introduction & CTAs -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Computer Science Undergrad &bull; Scaler School of Technology</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-text">Fahim</span>.
+          </h1>
+
+          <p class="hero-role">
+            Computer Science Student
+          </p>
+
+          <p class="hero-tagline">
+            Exploring AI/ML, Mathematics &amp; Quantitative Computing
+          </p>
+
+          <p class="hero-description">
+            I study computer science, mathematics, and AI/ML, and build practical projects.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              GitHub Profile
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Location:</span>
+              <span class="meta-value">Nashik, Maharashtra, India</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Direction:</span>
+              <span class="meta-value">First-Principles Computing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Technical CSS Visual Card -->
+        <!-- Demonstrates: Absolute positioning, CSS Keyframes, Box Model, Borders -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">fahim@sst:~/research/workspace</span>
+            </div>
+            
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+              <div class="terminal-output t-name">&gt; Mohammed Fahim Jhadwale</div>
+
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat interests.json</span></div>
+              <div class="terminal-output t-json">{</div>
+              <div class="terminal-output t-json t-indent">"core": ["Mathematics", "Computer Science"],</div>
+              <div class="terminal-output t-json t-indent">"domains": ["AI/ML", "Quantitative Research"],</div>
+              <div class="terminal-output t-json t-indent">"practice": ["Competitive Programming", "Deep Research"],</div>
+              <div class="terminal-output t-json t-indent">"mindset": "First principles over memorization"</div>
+              <div class="terminal-output t-json">}</div>
+
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">eval --math-rigor</span></div>
+              <div class="terminal-output t-math">&gt; &nabla;L(&theta;) = E[&nabla;_&theta; log p_&theta;(x)]</div>
+              <div class="terminal-output t-math">&gt; det(A - &lambda;I) = 0 &bull; O((V + E) log V)</div>
+
+              <div class="terminal-line terminal-cursor-line">
+                <span class="t-prompt">$</span> <span class="t-cmd">learning --active</span>
+                <span class="terminal-cursor"></span>
+              </div>
+            </div>
+
+            <!-- Floating Technical Badges with CSS Floating Animation -->
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">&int;</span>
+              <span>e<sup>-x&sup2;</sup> dx = &radic;&pi;</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">&Sigma;</span>
+              <span>DSA &bull; C++ &bull; Python &bull; Java</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. ABOUT SECTION                           -->
+    <!-- Demonstrates: CSS Grid Bento, Box model,   -->
+    <!-- clean typography, responsive hierarchy    -->
+    <!-- ========================================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 / ABOUT ME</span>
+          <h2 class="section-title">Understanding Deeply &bull; Learning by Building</h2>
+          <p class="section-subtitle">
+            How I learn, what I study, and what I’m building.
+          </p>
+        </div>
+
+        <div class="about-bento-grid">
+          <!-- Main Narrative Card -->
+          <article class="bento-card bento-span-2">
+            <h3 class="bento-title">My Journey</h3>
+            <p class="bento-text">
+              I’m a Computer Science student at Scaler School of Technology, curious about how software and mathematical models work.
+            </p>
+            <p class="bento-text">
+              I learn from first principles by working through algorithms, math, and machine learning concepts.
+            </p>
+            <p class="bento-text">
+              I apply what I learn through projects and code in Java, C++, and Python.
+            </p>
+          </article>
+
+          <!-- Philosophy Card -->
+          <article class="bento-card">
+            <div class="card-icon-header">
+              <span class="card-glyph">&fnof;(x)</span>
+            </div>
+            <h3 class="bento-title">First Principles</h3>
+            <p class="bento-text">
+              I focus on understanding the math and system behavior behind the tools I use.
+            </p>
+            <div class="pill-group">
+              <span class="pill">Rigorous Math</span>
+              <span class="pill">Deep Theory</span>
+              <span class="pill">Clean Code</span>
+            </div>
+          </article>
+
+          <!-- Current Focus Card -->
+          <article class="bento-card">
+            <div class="card-icon-header">
+              <span class="card-glyph">&lambda;</span>
+            </div>
+            <h3 class="bento-title">Current Intersection</h3>
+            <p class="bento-text">
+              Connecting mathematics, machine learning, and software development.
+            </p>
+            <div class="pill-group">
+              <span class="pill">AI/ML</span>
+              <span class="pill">Linear Algebra</span>
+              <span class="pill">Calculus</span>
+            </div>
+          </article>
+
+          <!-- Academic Location Card -->
+          <article class="bento-card bento-span-2">
+            <div class="bento-split-row">
+              <div>
+                <h3 class="bento-title">Scaler School of Technology</h3>
+                <p class="bento-text">
+                  Studying computer science, data structures, and algorithms (2026&ndash;present).
+                </p>
+              </div>
+              <div class="bento-stat-box">
+                <span class="stat-number">2026</span>
+                <span class="stat-label">Commenced SST Undergrad</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. FOCUS / INTERESTS SECTION               -->
+    <!-- Demonstrates: CSS Grid, Card Hover         -->
+    <!-- Transforms, Micro-interactions             -->
+    <!-- ========================================== -->
+    <section id="focus" class="section focus-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 / CORE INTERESTS</span>
+          <h2 class="section-title">What Drives My Curiosity</h2>
+          <p class="section-subtitle">
+            Topics I’m studying and practicing.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <!-- Card 1: AI / Machine Learning -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&Phi;</span>
+              <span class="focus-status">Exploring</span>
+            </div>
+            <h3 class="focus-name">Artificial Intelligence &amp; ML</h3>
+            <p class="focus-desc">
+              Studying machine learning, backpropagation, and how models learn from data.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Optimization &bull; Neural Networks &bull; Embeddings</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Mathematics -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&part;</span>
+              <span class="focus-status">Studying</span>
+            </div>
+            <h3 class="focus-name">Applied &amp; Pure Mathematics</h3>
+            <p class="focus-desc">
+              Studying linear algebra, calculus, discrete math, and probability.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Matrices &bull; Vector Spaces &bull; Probability</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Competitive Programming -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&Omicron;(n)</span>
+              <span class="focus-status">Practicing</span>
+            </div>
+            <h3 class="focus-name">Competitive Programming</h3>
+            <p class="focus-desc">
+              Solving algorithm problems in C++ and Java; practicing efficient solutions.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Graph Theory &bull; Dynamic Programming &bull; Trees</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Quantitative Research -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&sigma;&sup2;</span>
+              <span class="focus-status">Interested in</span>
+            </div>
+            <h3 class="focus-name">Quantitative Research</h3>
+            <p class="focus-desc">
+              Exploring statistics, stochastic models, and time-series analysis.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Stochastic Models &bull; Statistics &bull; Time Series</span>
+            </div>
+          </article>
+
+          <!-- Card 5: Computational Neural Network -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&nabla;</span>
+              <span class="focus-status">Exploring</span>
+            </div>
+            <h3 class="focus-name">Computational Neural Network</h3>
+            <p class="focus-desc">
+              Exploring neural network computation, backpropagation, and optimization.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Neural Networks &bull; Backpropagation &bull; Optimization</span>
+            </div>
+          </article>
+
+          <!-- Card 6: Deep Research -->
+          <article class="focus-card">
+            <div class="focus-top">
+              <span class="focus-glyph">&infin;</span>
+              <span class="focus-status">Interested In</span>
+            </div>
+            <h3 class="focus-name">Deep Research &amp; Building</h3>
+            <p class="focus-desc">
+              Reading technical papers and building small projects to test ideas.
+            </p>
+            <div class="focus-footer">
+              <span class="focus-topic">Paper Analysis &bull; Proof Verification &bull; Prototyping</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. SKILLS SECTION                          -->
+    <!-- Demonstrates: Bento grid, Pills, Flexbox,  -->
+    <!-- NO fake percentage bars                    -->
+    <!-- ========================================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 / SKILLS &amp; TOOLS</span>
+          <h2 class="section-title">Technical Foundations</h2>
+          <p class="section-subtitle">
+            Tools and concepts I use or am learning.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <article class="skills-card">
+            <div class="skills-category-header">
+              <span class="category-icon">&#123;&nbsp;&#125;</span>
+              <h3 class="skills-category-title">Programming</h3>
+            </div>
+            <p class="skills-category-desc">Languages for coursework and projects.</p>
+            <div class="skill-tags">
+              <span class="skill-tag"><strong>Java</strong> <small>&bull; OOP &amp; Core</small></span>
+              <span class="skill-tag"><strong>C++</strong> <small>&bull; STL &amp; Algorithms</small></span>
+              <span class="skill-tag"><strong>Python</strong> <small>&bull; ML &amp; Scripting</small></span>
+            </div>
+          </article>
+
+          <!-- Web Development -->
+          <article class="skills-card">
+            <div class="skills-category-header">
+              <span class="category-icon">&lt;/&gt;</span>
+              <h3 class="skills-category-title">Web</h3>
+            </div>
+            <p class="skills-category-desc">Building responsive web interfaces.</p>
+            <div class="skill-tags">
+              <span class="skill-tag"><strong>HTML5</strong> <small>&bull; Semantic &amp; Accessible</small></span>
+              <span class="skill-tag"><strong>CSS3</strong> <small>&bull; Grid &bull; Flexbox &bull; Responsive</small></span>
+            </div>
+          </article>
+
+          <!-- Tools & Environment -->
+          <article class="skills-card">
+            <div class="skills-category-header">
+              <span class="category-icon">&#9881;</span>
+              <h3 class="skills-category-title">Tools &amp; Workflow</h3>
+            </div>
+            <p class="skills-category-desc">Tools for coding and collaboration.</p>
+            <div class="skill-tags">
+              <span class="skill-tag"><strong>Git</strong> <small>&bull; Version Control</small></span>
+              <span class="skill-tag"><strong>GitHub</strong> <small>&bull; Collaboration</small></span>
+              <span class="skill-tag"><strong>VS Code</strong> <small>&bull; Primary Editor</small></span>
+              <span class="skill-tag"><strong>Linux</strong> <small>&bull; Shell &amp; Environment</small></span>
+            </div>
+          </article>
+
+          <!-- Currently Exploring -->
+          <article class="skills-card skills-card-highlight">
+            <div class="skills-category-header">
+              <span class="category-icon">&#128640;</span>
+              <h3 class="skills-category-title">Currently Exploring &amp; Deepening</h3>
+            </div>
+            <p class="skills-category-desc">Topics I’m studying now.</p>
+            <div class="skill-tags">
+              <span class="skill-tag highlight-tag">Data Structures &amp; Algorithms</span>
+              <span class="skill-tag highlight-tag">Machine Learning Fundamentals</span>
+              <span class="skill-tag highlight-tag">Probability &amp; Statistics</span>
+              <span class="skill-tag highlight-tag">Linear Algebra</span>
+              <span class="skill-tag highlight-tag">Competitive Programming</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. PROJECTS SECTION                        -->
+    <!-- Demonstrates: CSS Grid, Flexbox tags,      -->
+    <!-- Hover states, Real Hackathon Prototype +   -->
+    <!-- Clearly marked editable placeholders       -->
+    <!-- ========================================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 / PROJECTS</span>
+          <h2 class="section-title">What I've Built</h2>
+          <p class="section-subtitle">Projects I’ve built while learning and exploring web development.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="project-badge badge-category">Web Application</span>
+              </div>
+              <h3 class="project-title">Student Portal</h3>
+            </div>
+            <p class="project-description">
+              A student portal for accessing useful academic information and resources in one place.
+            </p>
+            <div class="project-details">
+              <h4 class="details-heading">Project Overview</h4>
+              <ul class="details-list">
+                <li>Designed around common student needs.</li>
+                <li>Provides a clear, accessible interface for portal content.</li>
+              </ul>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+
+            </div>
+                      <div class="project-links">
+              <a href="https://github.com/fahim-jhadwale27/Student-portal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+              <a href="https://fahim-jhadwale27.github.io/Student-portal/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+            </div></article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="project-badge badge-category">Frontend Clone</span>
+              </div>
+              <h3 class="project-title">Netflix Clone</h3>
+            </div>
+            <p class="project-description">
+              A Netflix-inspired streaming interface built with HTML and CSS.
+            </p>
+            <div class="project-details">
+              <h4 class="details-heading">Project Overview</h4>
+              <ul class="details-list">
+                <li>Recreates the look and feel of a streaming service homepage.</li>
+                <li>Built with responsive page layout and styling.</li>
+              </ul>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+            </div>
+                      <div class="project-links">
+              <a href="https://github.com/fahim-jhadwale27/testing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+              <a href="https://fahim-jhadwale27.github.io/testing/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+            </div></article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="project-badge badge-category">CSS Game</span>
+              </div>
+              <h3 class="project-title">Flexbox Quest</h3>
+            </div>
+            <p class="project-description">
+              A game made using CSS Flexbox, turning layout challenges into an interactive quest.
+            </p>
+            <div class="project-details">
+              <h4 class="details-heading">Project Overview</h4>
+              <ul class="details-list">
+                <li>Uses Flexbox layout properties as core game mechanics.</li>
+                <li>Helps players practice arranging and aligning elements.</li>
+              </ul>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS Flexbox</span>
+              <span class="tech-pill">Game</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/fahim-jhadwale27/flexbox-quest" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+              <a href="https://fahim-jhadwale27.github.io/flexbox-quest/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. EDUCATION & JOURNEY SECTION             -->
+    <!-- Demonstrates: Vertical timeline, pseudo-   -->
+    <!-- elements, borders, positioning             -->
+    <!-- ========================================== -->
+    <section id="journey" class="section journey-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05 / ACADEMIC JOURNEY</span>
+          <h2 class="section-title">Education &amp; Foundations</h2>
+          <p class="section-subtitle">
+            My current studies and academic background.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- SST -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2026 &mdash; Present</div>
+              <h3 class="timeline-title">Scaler School of Technology</h3>
+              <p class="timeline-subtitle">Computer Science Undergraduate</p>
+              <p class="timeline-desc">
+                Studying computer science, algorithms, and software development.
+              </p>
+              <div class="pill-group">
+                <span class="pill">Computer Science</span>
+                <span class="pill">Data Structures</span>
+                <span class="pill">Algorithms</span>
+                <span class="pill">Mathematics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class 12 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Completed 2026</div>
+              <h3 class="timeline-title">Class 12 &mdash; Science Stream</h3>
+              <p class="timeline-subtitle">Maharashtra State Board</p>
+              <p class="timeline-desc">
+                Completed the Science stream, including physics, chemistry, and higher mathematics.
+              </p>
+              <div class="pill-group">
+                <span class="pill">Higher Mathematics</span>
+                <span class="pill">Physics</span>
+                <span class="pill">Analytical Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. CONTACT SECTION                         -->
+    <!-- Demonstrates: CSS Grid, HTML Form, Inputs, -->
+    <!-- Labels, Accessible focus states            -->
+    <!-- ========================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">07 / GET IN TOUCH</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">
+            Get in touch about projects, computer science, or collaboration.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-card">
+            <h3 class="contact-heading">Conversation &amp; Collaboration</h3>
+            <p class="contact-text">
+              Reach out to discuss projects, research, or collaboration.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-item">
+                <span class="contact-item-icon">&#9993;</span>
+                <div>
+                  <span class="contact-item-label">Email:</span>
+                  <!-- Mailto link placeholder -->
+                  <a href="mailto:fahim.jhadwale@example.com" class="contact-link">
+                    fahim.jhadwale27@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item-icon">&#128205;</span>
+                <div>
+                  <span class="contact-item-label">Location:</span>
+                  <span class="contact-link static">Nashik, Maharashtra, India</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item-icon">&#128279;</span>
+                <div>
+                  <span class="contact-item-label">GitHub:</span>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    Github.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item-icon">&#128188;</span>
+                <div>
+                  <span class="contact-item-label">LinkedIn:</span>
+                  <a href="https://www.linkedin.com/in/mohammed-fahim-jhadwale-0b23b6408" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    Linkedin.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-note">
+              <span class="note-pulse"></span>
+              <span>Actively exploring collaborative hackathons &amp; research discussions.</span>
+            </div>
+          </div>
+
+          <!-- Right: Frontend-Only Contact Form -->
+          <div class="contact-form-card">
+            <h3 class="contact-heading">Send a Message</h3>
+            <p class="contact-subhead">
+              Frontend demonstration form for Builders Day.
+            </p>
+
+            <form class="contact-form" action="#" method="GET">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Your Name" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="your.email@example.com" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-input form-textarea" 
+                  rows="5" 
+                  placeholder="What would you like to discuss?" 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message
+              </button>
+
+              <p class="form-disclaimer">
+                <strong>Note:</strong> Demo form only; messages are not sent.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 10. FOOTER                                 -->
+  <!-- Demonstrates: Semantic markup, Flexbox,    -->
+  <!-- box model, responsive alignment            -->
+  <!-- ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#" class="footer-brand">&lt;FAHIM/&gt;</a>
+        <p class="footer-copy">
+          &copy; 2026 Mohammed Fahim Jhadwale. All rights reserved.
+        </p>
+        <p class="footer-subtext">
+          Built with HTML &amp; CSS &bull; Scaler School of Technology Builders Day Project
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#focus" class="footer-link">Focus</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#journey" class="footer-link">Journey</a>
+        <a href="#contact" class="footer-link">Contact</a>
+        <a href="#" class="footer-link back-to-top">&uarr; Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
